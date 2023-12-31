@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <script src="global.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+</head>
+<body>
+  <nav id='menu'>
+      <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+      <ul>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='deals.html'>Deals</a></li>
+        <li><a href='categories.html'>Categories</a></li>
+        <li><a href='services.html'>Services</a></li>
+        <li><a href='about.html'>About</a></li>
+      </ul>
+    </nav>
+    <h1 id="big-text" style="margin-top: 0px;">Categories</h1>
+    <div class="search-box">
+      <div class="container col-6 mt-5">
+        <input type="text" placeholder="Search ..." id="search-input">    
+      </div>
+    </div>
+    <div id="categories">
+      <div id='category-list'>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>CPU</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>RAM</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>CPU Cooler</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>AIO Cooler</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Motherboard</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>M2 SSD</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>CSATA SSD</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>HDD</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>GPU</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Case</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Power Supply</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Monitor</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Case Cooler</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Sound Card</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Keyboard</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Mouse</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Headphones</h1>
+        </li>
+        <li class="list-group-item" id="category-container">
+          <img src="img/cats/putimghere.png" id="category-img">
+          <h1>Speakers</h1>
+        </li>
+      </div>
+    </div>
+    <hr id="hl"></hr>
+    <div class="s-m-links">
+      <img src="img/s-logos/insta.png" class="social-logo">
+      <img src="img/s-logos/tg.png" class="social-logo">
+      <img src="img/s-logos/call.png" class="social-logo">
+      <img src="img/s-logos/yt.png" class="social-logo">
+      <img src="img/s-logos/tt.png" class="social-logo">
+    </div>
+    
+</body>
+<script>
+  document.querySelector("#search-input").addEventListener('input', filterList);
+function filterList(){
+    const searchInput = document.querySelector('#search-input');
+    const filter = searchInput.value.toLowerCase();
+    const listItems = document.querySelectorAll('.list-group-item');
+
+    listItems.forEach((item) =>{
+        let text = item.textContent;
+        if(text.toLowerCase().includes(filter.toLowerCase())){
+            item.style.display = "";
+        }
+        else{
+            item.style.display = 'none';
+        }
+    });
+}
+</script>
+</html>
